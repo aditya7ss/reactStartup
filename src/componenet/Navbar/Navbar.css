@@ -1,0 +1,122 @@
+:root {
+  --primaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  --bodyColor: rgb(240, 240, 240);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColor:hsl(0,0,100%);
+  --inputColor: rgb(239,-239, -239);
+  --whiteColorDeam: rgb(240, 240, 240);
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 100%;
+  padding: 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+
+  .logo {
+    color: #0b0d11;
+    font-weight: 600;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin-right: 35rem;
+
+    .icon{
+        font-size: 25px;
+        color: var(--primaryColor);
+        transform: translateY(5px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .navBar {
+      position: absolute;
+      background: var(--whiteColorDeam);
+      width: 88%;
+      height: max-content;
+      border-radius: 1rem;
+      top: -500rem;
+      left: 50%;
+      padding: 1rem;
+      transform: translate(-50%);
+      z-index: 2000;
+      box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+      transition: 0.3s ease-in-out;
+
+      .navLists {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        
+        margin: auto;
+        padding: 0.5rem;
+
+        .navItem {
+          padding: 0.5rem 0;
+          
+          .navLink {
+            color: var(--textColor);
+            font-size: 0.9rem;
+            font-weight: 600;
+          
+            &::hover{
+              color: var(--primaryColor);
+            }
+          }
+        }
+        .btn{
+            margin-top:1rem;
+
+            a{
+                font-weight:600;
+                
+                color:var(--whiteColor);
+            }
+        }
+      }
+      .closeNavbar{
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        color:var(--primaryColor);
+        &:hover{
+            color:var(--SecondaryColor)
+        }
+      }
+    }
+.activeNavbar{
+  top:7rem;
+  
+}
+    
+  }
+  .toggleNavbar{
+    .icon{
+        font-size: 25px;
+        color: var(--primaryColor);
+    }
+    &:hover.icon{
+        color: var(--SecondaryColor);
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .toggleNavbar,
+  .closeNavbar {
+    display: none;
+  }
+}

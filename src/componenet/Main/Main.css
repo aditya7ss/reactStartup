@@ -1,0 +1,95 @@
+:root {
+    --primaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(
+      to right top,
+      #051937,
+      #004d7a,
+      #008793,
+      #00bf72,
+      #a8eb12
+    );
+    --bodyColor: rgb(240, 240, 240);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColor: hsl(0, 0, 100%);
+    --inputColor: rgb(239, -239, -239);
+    --whiteColorDeam: rgb(240, 240, 240);
+  }
+
+.main{
+    width: 100%;
+   
+    .secTitle{
+       
+       .title{
+        top: 50%;
+        left: 2%;
+        font-size: 2rem;
+        position: relative;
+        width: max-content;
+        color: var(--textColor);
+        margin:1rem 0;
+        z-index: 2;
+       &::after{
+        position: absolute;
+        content: '';
+        background: var(--SecondaryColor);
+        height: 5px;
+        right: 2%;
+        bottom: 2%;
+        z-index: -1;
+       }
+    
+     }
+    }
+}
+
+.main {
+    padding: 20px;
+
+    .secTitle {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+  }
+  
+ 
+  
+  .secContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .singleDestination {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  .singleDestination:hover{
+    background-color: orangered;
+    cursor: pointer;
+    .itemtitle{
+        color: #ffffff;
+    }
+   }
+  
+  .cardInfo h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  .section2{
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+  
+  @media (max-width: 768px) {
+    .secContent {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+  

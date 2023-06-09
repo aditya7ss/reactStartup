@@ -1,0 +1,76 @@
+.footer-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footerlist,
+  .footer-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+  }
+  
+  .footerlist li,
+  .footer-list li {
+    margin-bottom: 10px;
+  }
+  
+  .footerlist h4,
+  .footer-list h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footerlist p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .fotlogo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .socialFooter {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  /* Small devices (up to 576px) */
+  @media (max-width: 576px) {
+    .footerlist,
+    .footer-list {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .fotlogo {
+      margin: 0 auto 10px;
+    }
+  }
+  
+  /* Medium devices (between 577px and 768px) */
+  @media (min-width: 577px) and (max-width: 768px) {
+    .footerlist,
+    .footer-list {
+      width: 50%;
+      text-align: center;
+    }
+  }
+  
+  /* Large devices (above 768px) */
+  @media (min-width: 769px) {
+    .footerlist,
+    .footer-list {
+      width: 25%;
+      text-align: left;
+    }
+  }
+  

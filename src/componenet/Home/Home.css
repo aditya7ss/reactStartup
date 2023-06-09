@@ -1,0 +1,148 @@
+:root {
+  --primaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  --bodyColor: rgb(240, 240, 240);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColor: hsl(0, 0, 100%);
+  --inputColor: rgb(239, -239, -239);
+  --whiteColorDeam: rgb(240, 240, 240);
+}
+.home {
+  width: 100%;
+  height: 60%;
+  position: relative;
+
+  margin: auto;
+
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: hard-light;
+    background-color: aliceblue;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  .video{
+    position: absolute;
+    height:80%;
+    width:100vh;
+    object-fit: cover;  
+    top: 0; bottom: 0;
+    animation: fadeIn 5s; 
+
+
+  }
+  
+}
+@keyframes fadeIn{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.homeContent{
+    height: max-content;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    
+
+    .textDiv{
+        padding: 2rem 0;
+
+        .largetext{
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: rgb(8, 6, 4);
+        }
+        .smalltext{
+            font-size: 1.2rem;
+            color: aliceblue;
+        }
+        
+       
+        }
+
+        .searchDiv {
+            display: flex;
+            align-items: center;
+          }
+          
+          .searchbar {
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            width: 25rem;
+            height: 4rem;
+            font-size: 16px;
+            outline: none;
+            top: 10%;
+            box-shadow: 0 2px 4px rgba(236, 235, 235, 0.1);
+          }
+          
+          .searchicon {
+            background-color: #f5652d;
+            color: #fff;
+            
+            height: 4rem;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            margin-left:.5rem ;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          
+          .searchicon:hover {
+            background-color:whitesmoke;
+            color: #f5652d;
+          }
+          
+    }
+
+/* ///test */
+
+.largetext {
+    position: relative;
+    animation: slide-in 6s forwards;
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .largetext h2 {
+    position: relative;
+    animation: slide-in 4s forwards;
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
